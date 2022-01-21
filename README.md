@@ -23,9 +23,8 @@ The dependencies on the Espresso tests are replaced using Hilt.
 
 ## Screenshots
 
-![Image #1](screenshots/img_1.png)
-![Image #2](screenshots/img_2.png)
-![Image #3](screenshots/img_3.png)
-![Image #4](screenshots/img_4.png)
-![Image #5](screenshots/img_5.png)
-
+- [Image #1](screenshots/img_1.png)
+- [Image #2](screenshots/img_2.png)
+- [Image #3](screenshots/img_3.png)
+- [Image #4](screenshots/img_4.png)
+- [Image #5](screenshots/img_5.png)
