@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/app_bar_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/ivAvatarBackground"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:background="#efefef"
+                app:layout_scrollFlags="scroll"
+                tools:ignore="ContentDescription"
+                tools:src="#aa0" />
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                app:layout_scrollFlags="scroll"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_chip_comics" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/gradient_dim_top"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_close" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.character.detail.CharacterDetailFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/viewMarginLarge"
+                android:layout_marginTop="@dimen/viewMarginLarge"
+                android:layout_marginEnd="@dimen/viewMarginLarge"
+                android:gravity="center"
+                android:textAppearance="?textAppearanceTitleLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="THIS IS A TITLE" />
+
+
+            <TextView
+                android:id="@+id/tvPubDateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/viewMarginLarge"
+                android:layout_marginTop="@dimen/viewMarginLarge"
+                android:text="@string/comic_detail_published"
+                android:textAppearance="?textAppearanceTitleSmall"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <TextView
+                android:id="@+id/tvPubDateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?textAppearanceBodySmall"
+                app:layout_constraintStart_toStartOf="@id/tvPubDateTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvPubDateTitle"
+                tools:text="January 05, 2002" />
+
+            <TextView
+                android:id="@+id/tvWriterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/viewMarginLarge"
+                android:layout_marginEnd="@dimen/viewMarginLarge"
+                android:text="@string/comic_detail_writer"
+                android:textAppearance="?textAppearanceTitleSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <TextView
+                android:id="@+id/tvWriterValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?textAppearanceBodySmall"
+                app:layout_constraintStart_toStartOf="@id/tvWriterTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvPubDateTitle"
+                tools:text="January 05, 2002" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/viewMarginLarge"
+                android:layout_marginTop="@dimen/viewMarginLarge"
+                android:layout_marginEnd="@dimen/viewMarginLarge"
+                android:textAppearance="?textAppearanceBodyLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWriterValue"
+                tools:text="This is the description" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="@dimen/viewMarginExtraLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/viewMarginLarge"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

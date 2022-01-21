@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CharactersListFragment">
+
+    <fragment
+        android:id="@+id/CharactersListFragment"
+        android:name="com.rbelchior.marvel.ui.character.list.CharactersListFragment"
+        android:label="@string/list_fragment_label"
+        tools:layout="@layout/fragment_character_list">
+
+        <action
+            android:id="@+id/action_ListFragment_to_DetailFragment"
+            app:destination="@id/CharacterDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CharacterDetailFragment"
+        android:name="com.rbelchior.marvel.ui.character.detail.CharacterDetailFragment"
+        android:label="@string/detail_fragment_label"
+        tools:layout="@layout/fragment_character_detail">
+
+        <argument
+            android:name="characterId"
+            app:argType="long" />
+
+        <action
+            android:id="@+id/action_DetailFragment_to_ComicsListFragment"
+            app:destination="@+id/ComicsListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+    </fragment>
+
+    <dialog
+        android:id="@+id/ComicsListFragment"
+        android:name="com.rbelchior.marvel.ui.comic.list.ComicsListFragment"
+        tools:layout="@layout/fragment_comics_list">
+
+        <argument
+            android:name="characterId"
+            app:argType="long" />
+
+        <action
+            android:id="@+id/action_ComicsList_to_ComicDetail"
+            app:destination="@+id/ComicDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+    </dialog>
+
+    <fragment
+        android:id="@+id/ComicDetailFragment"
+        android:name="com.rbelchior.marvel.ui.comic.detail.ComicDetailFragment"
+        android:label="@string/detail_fragment_label"
+        tools:layout="@layout/fragment_comic_detail">
+
+        <argument
+            android:name="comicId"
+            app:argType="long" />
+
+    </fragment>
+
+
+</navigation>

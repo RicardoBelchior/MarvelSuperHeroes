@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Marvel Superheroes</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="list_fragment_label">List Heroes</string>
+    <string name="detail_fragment_label">Hero Detail</string>
+    <string name="comics_list_fragment_label">Comics List</string>
+    <string name="comic_detail_fragment_label">Comic Detail</string>
+
+    <!-- Chips -->
+    <string name="chip_comics">%s comics</string>
+    <string name="chip_series">%s series</string>
+    <string name="chip_stories">%s stories</string>
+    <string name="chip_events">%s events</string>
+    <string name="open_in_browser">Open in Browser</string>
+
+    <!-- Comics -->
+    <string name="comics_list_title">Comics</string>
+    <string name="comic_detail_published">Published:</string>
+    <string name="comic_detail_writer">Writer:</string>
+    <string name="retry">Retry</string>
+    <string name="search_hint">Search</string>
+
+</resources>

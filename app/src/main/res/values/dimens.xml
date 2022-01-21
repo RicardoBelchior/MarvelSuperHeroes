@@ -1,0 +1,12 @@
+<resources>
+    <!-- General dimensions -->
+    <dimen name="viewMarginSmallest">1dp</dimen>
+    <dimen name="viewMarginExtraSmall">2dp</dimen>
+    <dimen name="viewMarginSmall">4dp</dimen>
+    <dimen name="viewMargin">8dp</dimen>
+    <dimen name="viewMarginLarge">16dp</dimen>
+    <dimen name="viewMarginExtraLarge">24dp</dimen>
+    <dimen name="viewMarginDoubleExtraLarge">48dp</dimen>
+
+    <dimen name="rvBottomMargin">128dp</dimen>
+</resources>
