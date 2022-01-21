@@ -21,10 +21,11 @@ The project includes a few unit and Espresso tests (`test/` and `androidTest/` u
 [Mockk](https://mockk.io/), [Barista](https://github.com/AdevintaSpain/Barista) as helper libraries. 
 The dependencies on the Espresso tests are replaced using Hilt.
 
-## Screenshots
+## Demo
 
-- [Image #1](screenshots/img_1.png)
-- [Image #2](screenshots/img_2.png)
-- [Image #3](screenshots/img_3.png)
-- [Image #4](screenshots/img_4.png)
-- [Image #5](screenshots/img_5.png)
+- [Demo](demo/demo.mp4)
+- [Image #1](demo/img_1.png)
+- [Image #2](demo/img_2.png)
+- [Image #3](demo/img_3.png)
+- [Image #4](demo/img_4.png)
+- [Image #5](demo/img_5.png)
